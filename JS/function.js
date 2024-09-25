@@ -25,5 +25,9 @@ function showSectionById(id){
 }
 
 function blogPage(){
-    window.location.replace('blog.html')
+    window.location.replace('blog.html');
+}
+
+function homePage(){
+    window.location.replace('index.html');
 }

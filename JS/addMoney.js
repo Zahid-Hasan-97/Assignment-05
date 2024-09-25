@@ -2,7 +2,8 @@ document.getElementById('donate-btn')
     .addEventListener('click', function(event){
         event.preventDefault();
 
-        const addMoney = getInputFieldValueById('input-add-money'); 
+        const addMoney = getInputFieldValueById('input-add-money');
+        // const location =getElementById('noakhali');
 
         if(!isNaN(addMoney) &&  addMoney > 0){
             const addedDonation = getTextFieldValueById('donation-balance'); 
@@ -42,7 +43,7 @@ document.getElementById('donate-btn')
 )
 
 
-//for seconde card 
+//for second card 
 
 document.getElementById('donate-btn-two')
     .addEventListener('click', function(event){
