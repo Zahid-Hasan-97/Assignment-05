@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1>Important FAQ</h1>
+      <!-- Accordion Item 1 -->
+<div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>What is the Document Object Model (DOM)?</span>
+      <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+        The DOM enables JavaScript to manipulate the HTML structure of a webpage, enabling the development of dynamic and interactive web applications.
+      </div>
+    </div>
+  </div>
+   
+  <!-- Accordion Item 2 -->
+  <div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>How do you select an element  from the DOM?</span>
+      <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+        By Id, class name, tag name, query selector, query selector all.
+      </div>
+    </div>
+  </div>
+   
+  <!-- Accordion Item 3 -->
+  <div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>What is event delegation in the context of the DOM, and why is it useful?</span>
+      <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+        Event Delegation in the DOM involves adding an event listener to a containing element rather than to individual child elements. This enables you to efficiently manage events for multiple child elements without needing to attach separate event listeners to each one.
+
+        It's improve performance, dynamic content, code organization etc.
+      </div>
+    </div>
+  </div>
+
+  <!-- Accordion Item 4 -->
+  <div class="border-b border-slate-200">
+    <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+      <span>How do you manipulate an element's attributes and styles using the DOM?</span>
+      <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="pb-5 text-sm text-slate-500">
+        By using getAttributes(), setAttributes
+      </div>
+    </div>
+  </div>
+   
+  <script>
+    function toggleAccordion(index) {
+      const content = document.getElementById(`content-${index}`);
+      const icon = document.getElementById(`icon-${index}`);
+   
+      // SVG for Down icon
+      const downSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </svg>
+      `;
+   
+      // SVG for Up icon
+      const upSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      `;
+   
+      // Toggle the content's max-height for smooth opening and closing
+      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0';
+        icon.innerHTML = upSVG;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.innerHTML = downSVG;
+      }
+    }
+  </script>
+</body>
+</html>
