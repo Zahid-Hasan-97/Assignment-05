@@ -23,3 +23,7 @@ function showSectionById(id){
     // showing id by given parameter
     document.getElementById(id).classList.remove('hidden');
 }
+
+function blogPage(){
+    window.location.replace('blog.html')
+}
